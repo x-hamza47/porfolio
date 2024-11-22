@@ -1,4 +1,5 @@
 import { SpotLight } from './ui/Spotlight'
+import { TextGenerateEffect } from "./ui/TextGeneratorEffect"
 
 const Hero = () => {
   return (
@@ -6,7 +7,9 @@ const Hero = () => {
       <div>
         <SpotLight className="-top-40 -left-10 md:-left-32 md:-top-10 h-screen" />
         <SpotLight
-          className="top-10 left-full h-[80vh] w-[50vw]" fill="purple"/>
+          className="top-10 left-full h-[80vh] w-[50vw]"
+          fill="purple"
+        />
         <SpotLight className="-top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
       </div>
 
@@ -14,9 +17,16 @@ const Hero = () => {
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
-      <div className="flex justify-center flex-col items-center relative my-20 w-[100vw]">
-        <div>
-          <h2 className='uppercase tracking-widest text-blue-100 max-w-80 text-xs text-center'>Designing Tomorrow’s Digital Landscapes</h2>
+      <div className="flex justify-center flex-col items-center relative my-20">
+        <div className="max-w-[89vw] flex flex-col items-center justify-center text-blue-100 text-center">
+          <h2 className="uppercase tracking-widest text-blue-100 max-w-80 text-xs">
+            Designing Tomorrow&apos;s Digital Landscapes
+          </h2>
+          <TextGenerateEffect
+            words="Empowering Brands with Full-Stack Web Solutions"
+            className="text-[40px] md:text-5xl lg:text-6xl"
+          />
+          <p className=' md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>Hi, I&apos;m Hamza, a Developer Crafting Digital Experiences</p>
         </div>
       </div>
     </div>
